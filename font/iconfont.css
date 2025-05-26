@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1683287191787') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconShopping:before {
+  content: "\e636";
+}
+
+.iconSet:before {
+  content: "\e643";
+}
+
+.iconManagement:before {
+  content: "\e634";
+}
+
+.iconRoom:before {
+  content: "\e606";
+  font-weight: 600;
+  font-size: 30px;
+  margin-left:-3px;
+}
+
+.iconTerminal:before {
+  content: "\e618";
+}
+
+.iconEntrepot:before {
+  content: "\e7c6";
+}
+
+.iconEmployee:before {
+  content: "\ea3f";
+}
+

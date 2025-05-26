@@ -1,0 +1,16 @@
+{
+  "id": "4094268",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "444312",
+      "name": "休闲，咖啡，娱乐",
+      "font_class": "xiuxiankafeiyule",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    }
+  ]
+}

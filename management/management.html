@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>编队</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+  <script src="js/script.js" defer></script>
+</head>
+<body>  
+  <div class="wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <ul class="carousel">
+      <li class="card">
+        <div class="img">
+          <img src="images/伊芙利特.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/伊芙利特">
+          <h2>伊芙利特</h2>
+        </a>
+        <span>我就是伊芙利特！赫默说罗德岛是个好地方，但我不喜欢你们这些穿白大衣的家伙......除了赫默之外。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/W1.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/W">
+          <h2>W</h2>
+        </a>
+        <span>萨卡兹佣兵，W，真是好久不见，虽然这个“好久”可能含义不同。但没关系，既然现在的你不是我要找的你，那你暂时是安全的，暂时哦。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/傀影1.png" alt="img">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/傀影">
+          <h2>傀影</h2>
+        </a>
+        <span>代号傀影，黑夜中的幽灵，幕布后的幻影。告诉我，你的敌人在哪，是谁……</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/克洛丝.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/克洛丝">
+          <h2>克洛丝</h2>
+        </a>
+        <span>嗨~嗨~我是克洛丝哦~我还不成熟，从今天开始会加油的~</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/凯尔希1.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/凯尔希">
+          <h2>凯尔希</h2>
+        </a>
+        <span>博士，我出现在这里，说明局势不容乐观。你需要专心......继续完成你的使命。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/华法琳.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/华法琳">
+          <h2>华法琳</h2>
+        </a>
+        <span>我，华法琳，血液学专科医师。比起普通的治疗法术，我会利用血液学相关知识和经验，为你们提供比常规方式更好的医疗保障。那么，请多关照啦。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/吽.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/吽">
+          <h2>吽</h2>
+        </a>
+        <span>您就是老鲤说的博士了吧，您好，我是吽，擅长的是安保工作和机械修理，您要是出门缺个保镖，或者电视冰箱坏了，都可以叫我。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/天火.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/天火">
+          <h2>天火</h2>
+        </a>
+        <span>“王者之杖”所属，天火。在达成目的之前，我会暂时在罗德岛停留。目的？当然是将整合运动焚烧殆尽。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/守林人.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/守林人">
+          <h2>守林人</h2>
+        </a>
+        <span>狙击手守林人。为了复仇，我需要强大力量的帮助。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/安洁莉娜.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/安洁莉娜">
+          <h2>安洁莉娜</h2>
+        </a>
+        <span>我是来自叙拉古的信使，安心院安洁莉娜。嗯，叫我安洁莉娜就可以了。我能用博士来称呼博士你吗？</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/巡林者.png" alt="img" draggable="false">
+        </div>
+         <a href="https://wiki.biligame.com/arknights/巡林者">
+          <h2>巡林者</h2>
+        </a>
+        <span>狙击干员巡林者，等候差遣。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/年.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/年">
+          <h2>年</h2>
+        </a>
+        <span>有人吗？贵公司的员工和我说这里生活条件很好，免费食宿，还有多种多样的娱乐方式......闲杂人员不得入内？哎，别这样，给个面子嘛。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/德克萨斯.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/德克萨斯">
+          <h2>德克萨斯</h2>
+        </a>
+        <span>代号德克萨斯，职能包括载具驾驶、货物搬运以及人员安全保障。关于任务的说明，请尽量简单些。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/慑砂.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/慑砂">
+          <h2>慑砂</h2>
+        </a>
+        <span>我知道你在寻找什么，罗德岛的博士，你渴望真相和强大！而我慑砂，愿意赐予你这份力量......哎别，别这样，别推我出门啊，我是认真来求职的！</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/文月.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/文月">
+          <h2>文月</h2>
+        </a>
+        <span>神秘人物，所属部门为龙门。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/斯卡蒂.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/斯卡蒂">
+          <h2>斯卡蒂</h2>
+        </a>
+        <span>斯卡蒂，赏金猎人。你真要签下我？我可是那种，会给你带来灾祸的人哦。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/暗索.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/暗索">
+          <h2>暗索</h2>
+        </a>
+        <span>我叫暗索，很高兴认识你。啊对了，你的饭卡还在这里，别忘记拿了。唔？为什么在我这儿？这是秘·密·哦。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/杜宾.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/杜宾">
+          <h2>杜宾</h2>
+        </a>
+        <span>敬礼！曾属玻利瓦尔国民警备队，我是教官杜宾。长话短说，请把需受训干员的名单给我看一下。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/梅.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/梅">
+          <h2>梅</h2>
+        </a>
+        <span>我是皇家侦探，梅，请配合我的调查！欸？你说我找错地方了？不可能！我有那个企鹅潜藏在这里的证据！</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/梅尔.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/梅尔">
+          <h2>梅尔</h2>
+        </a>
+        <span>莱茵生命所属，鲁特拉工作室，竭诚为您服务。是的，没有其他成员，我一人就是整个工作室。很厉害吧！</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/棘刺2.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/棘刺">
+          <h2>棘刺</h2>
+        </a>
+        <span>你就是博士吗，自我介绍一下，代号棘刺，今天起就任——嗯？我的裤脚卷起来了？......不要在意，这是常有的事。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/槐虎.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/槐虎">
+          <h2>槐虎</h2>
+        </a>
+        <span>	请问这里就是罗德岛吗？你好，我是今天起在这里打工的槐琥，请严格要求我，我一定能满足各位的工作需求。嗯，一定。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/泥岩.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/泥岩">
+          <h2>泥岩</h2>
+        </a>
+        <span>萨卡兹雇佣兵，泥岩......您就是博士吗，罗德岛救了我不止一次，现在，请让我回报您吧。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/流星.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/流星">
+          <h2>流星</h2>
+        </a>
+        <span>你好，我是流星，来自森林的弓箭手。您需要擅长远程援护的干员吗？</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/深海色.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/深海色">
+          <h2>深海色</h2>
+        </a>
+        <span>请叫我“深海色”。我的职业是画家，对，只是一个“画家”哦。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/火神.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/火神">
+          <h2>火神</h2>
+        </a>
+        <span>他们都叫我火神。如果需要的话，我可以给你们损毁的武器做维护，另外......我需要的锻冶设备就在这张图纸里。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/煌2.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/煌">
+          <h2>煌</h2>
+        </a>
+        <span>罗德岛干员，煌，向你报道。拿着，这是可以直接调遣我的权限认可书，凯尔希医生已经签了名了。好了博士，就让其他小队看看我们的本事吧！</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/瑕光.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/瑕光">
+          <h2>瑕光</h2>
+        </a>
+        <span>卡西米尔骑士，代号“瑕光”，嘿——早就听姐姐说过很多你的事情啦，博士，直接喊我玛莉娅也可以哦？</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/白面鸮.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/白面鸮">
+          <h2>白面鸮</h2>
+        </a>
+        <span>前莱茵生命数据维护员白面鸮，如果方便的话，请使用命令行完成您所需的操作。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/真理.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/真理">
+          <h2>真理</h2>
+        </a>
+        <span>我是真理，虽然还是一名学生，却因为会使用法术，所以就被招募了......是啊，身为学生却站在这种地方，真是奇怪，不是吗？</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/空.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/空">
+          <h2>空</h2>
+        </a>
+        <span>｡･∀･)ﾉﾞ嗨！我是来自MSR的，大家的偶像空~！呃，抱歉抱歉~这种风格的自我介绍，好像不太适合罗德岛吧。呜......</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/絮雨.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/絮雨">
+          <h2>絮雨</h2>
+        </a>
+        <span>我的代号是絮雨，不过是一介巡游医师。如果可以的话，就将我当做在屋檐下避雨的旅人吧,请不要太在意我的事......</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/红豆.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/红豆">
+          <h2>红豆</h2>
+        </a>
+        <span>请问，这里是博士的办公室吗，我找博士很久了，麻烦你......什么？你就是博士？哼哼，干员红豆来报到了！</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/缄默德克萨斯.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/缄默德克萨斯">
+          <h2>缄默德克萨斯</h2>
+        </a>
+        <span>又见面了，博士。叙拉古的雨季容易弄湿尾巴，这里的环境更舒适。别担心，快递业务能天使她们会继续受理，不过，如果仍有指派给我个人的任务，我也会执行。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/缠丸.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/缠丸">
+          <h2>缠丸</h2>
+        </a>
+        <span>缠丸，现在正式加入罗德岛！我来负责战斗，指挥就交给博士你了！</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/缪缪缪.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/缪尔赛思">
+          <h2>缪尔赛思</h2>
+        </a>
+        <span>莱茵生命，生态科主任，缪尔赛思。不过我们之间应该不需要这么正式的问候吧，博士。毕竟，我们早就是朋友了。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/能天使.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/能天使">
+          <h2>能天使</h2>
+        </a>
+        <span>口令是“企鹅帝国万岁”，你就是雇主吗？叫我能天使。我和那个冷淡的鲁珀人可不一样，你要是想找点有趣的事做，随时都可以来叫我！</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/艾丝黛尔.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/艾丝黛尔">
+          <h2>艾丝黛尔</h2>
+        </a>
+        <span>您、您好......那个，呃，对不起......我的角不小心把您办公室的门捅穿......了......</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/艾丽妮1.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/艾丽妮">
+          <h2>艾丽妮</h2>
+        </a>
+        <span>伊比利亚审判庭信使，艾丽妮。你就是罗德岛的博士？那几个阿戈尔的猎人好像很信任你......接下来的合作中，让我看看你的特别之处吧。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/芬.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/芬">
+          <h2>芬</h2>
+        </a>
+        <span>我是芬，长枪手，现在正担任着行动预备组A1的队长一职。我和我的小队一定会竭尽全力，成为罗德岛可靠的战力。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/苏苏洛.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/苏苏洛">
+          <h2>苏苏洛</h2>
+        </a>
+        <span>医疗干员苏苏洛向您报道。即使博士您身兼多种要职，是干员们的导师，但医生的话，您也是要听的哦。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/远山.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/远山">
+          <h2>远山</h2>
+        </a>
+        <span>遵从阿尔克纳的指引，我的命运终于与您交汇了，博士。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/阿.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/阿">
+          <h2>阿</h2>
+        </a>
+        <span>你就是博士吧？幸会幸会。我叫阿，对，就是阿——的阿。事务所在罗德岛有些事情要处理，所以我就来了。事先问问，你对医疗事故敏感吗？</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/陈.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/陈">
+          <h2>陈</h2>
+        </a>
+        <span>陈，龙门近卫局特别督察组组长。基于一些特殊原因，我要暂时留在这里一段时间。之前的合作中，我想我们已经彼此了解了，请马上带我去工作现场吧。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/霜星.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/霜星">
+          <h2>霜星</h2>
+        </a>
+        <span>整合运动法术部队干部，威胁极大，能使用冰属性法术造成极为恶劣的作战环境。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/风笛2.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/风笛">
+          <h2>风笛</h2>
+        </a>
+        <span>你好！你就是博士，对不对？龙门的陈警司说我可以在这找到帮手！要先签名？嗯，风——笛——好了！欸？“成为干员”？“全日驻舰”？那是什么呀！</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/香草.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/香草">
+          <h2>香草</h2>
+        </a>
+        <span>香草，以受训干员的身份前来学习。博士阁下，今后就请您多多指教了。</span>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img src="images/黑键.png" alt="img" draggable="false">
+        </div>
+        <a href="https://wiki.biligame.com/arknights/黑键">
+          <h2>黑键</h2>
+        </a>
+        <span>向您致以诚挚的谢意，罗德岛的博士，感谢您收留一个微不足道的落难之人。如果像我这样的庸才都能对罗德岛的事业有所裨益，那真是再好不过了。</span>
+      </li>
+    </ul>
+      
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+</body>
+</html>

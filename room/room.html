@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        .img{
+            width:100%;
+        }
+        .divOne,.divTwo,.divThree,.divFour,.divFive,.divSix,.divSeven{
+            width: 175px;
+            height:175px;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .divOne{
+            background-image: url("img/书架.png");
+            z-index: 1;
+        }
+        .divTwo{
+            background-image: url("img/“枝丫”.png");
+            z-index: 10;
+        }
+        .divThree{
+            background-image: url("img/“收纳盒”.png");
+            z-index: 20;
+        }
+        .divFour{
+            background-image: url("img/后山.png");
+            z-index: 30;
+        }
+        .divFive{
+            background-image: url("img/后山.png");
+            z-index: 40;
+        }
+        .divSix{
+            background-image: url("img/展柜.png");
+            z-index: 50;
+        }
+        .divSeven{
+            background-image: url("img/故乡.png");
+            z-index: 60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/壁纸.jpg" class="img">
+        <div class="divOne"></div>
+        <div class="divTwo"></div>
+        <div class="divThree"></div>
+        <div class="divFour"></div>
+        <div class="divFive"></div>
+        <div class="divSix"></div>
+        <div class="divSeven"></div>
+        <img src="img/展览图.jpg" class="img">
+    </div>
+    <script>
+        drag('divOne'),drag('divTwo'),drag('divThree'),drag('divFour'),drag('divFive'),drag('divSix'),drag('divSeven')
+        function drag(name){
+            let divOne = document.getElementsByClassName(name);
+            
+            for(var i = 0; i<divOne.length;i++){
+                divOne[i].onmousedown = function(e){
+                    var dive = e || event;
+                    var distanceX = dive.clientX - e.target.offsetLeft//鼠标点击盒子X轴的位置减去盒子距离左边的位置；得到在盒子内点击的位置
+                    var distanceY = dive.clientY - e.target.offsetTop//鼠标点击盒子Y轴的位置减去盒子距离顶部的位置；得到在盒子内点击的位置
+                    document.onmousemove = function(ev){
+                        var dive = ev || event
+                        ev.target.style.top = dive.clientY - distanceY +'px';   //移动时的Y位置减去鼠标在盒子内点击的位置；得到当前位置
+                        ev.target.style.left = dive.clientX - distanceX +'px';  //移动时的X位置减去鼠标在盒子内点击的位置；得到当前位置
+                    }
+                    document.onmouseup = function(){
+                        document.onmousemove = null;
+                        document.onmouseup = null;
+                    }
+                }
+            }
+        }
+        // drag('divTwo')
+        // function drag(name){
+        //     divTwo = document.getElementsByClassName(name);
+        //     for(var i = 0; i<divTwo.length;i++){
+        //         divTwo[i].onmousedown = function(e){
+        //             var dive = e || event;
+        //             var distanceX = dive.clientX - e.target.offsetLeft//鼠标点击盒子X轴的位置减去盒子距离左边的位置；得到在盒子内点击的位置
+        //             var distanceY = dive.clientY - e.target.offsetTop//鼠标点击盒子Y轴的位置减去盒子距离顶部的位置；得到在盒子内点击的位置
+        //             document.onmousemove = function(ev){
+        //                 var dive = ev || event
+        //                 ev.target.style.top = dive.clientY - distanceY +'px';   //移动时的Y位置减去鼠标在盒子内点击的位置；得到当前位置
+        //                 ev.target.style.left = dive.clientX - distanceX +'px';  //移动时的X位置减去鼠标在盒子内点击的位置；得到当前位置
+        //             }
+        //             document.onmouseup = function(){
+        //                 document.onmousemove = null;
+        //                 document.onmouseup = null;
+        //             }
+        //         }
+        //     }
+        // }
+        // drag('divThree')
+        // function drag(name){
+        //     divThree = document.getElementsByClassName(name);
+        //     for(var i = 0; i<divThree.length;i++){
+        //         divThree[i].onmousedown = function(e){
+        //             var dive = e || event;
+        //             var distanceX = dive.clientX - e.target.offsetLeft//鼠标点击盒子X轴的位置减去盒子距离左边的位置；得到在盒子内点击的位置
+        //             var distanceY = dive.clientY - e.target.offsetTop//鼠标点击盒子Y轴的位置减去盒子距离顶部的位置；得到在盒子内点击的位置
+        //             document.onmousemove = function(ev){
+        //                 var dive = ev || event
+        //                 ev.target.style.top = dive.clientY - distanceY +'px';   //移动时的Y位置减去鼠标在盒子内点击的位置；得到当前位置
+        //                 ev.target.style.left = dive.clientX - distanceX +'px';  //移动时的X位置减去鼠标在盒子内点击的位置；得到当前位置
+        //             }
+        //             document.onmouseup = function(){
+        //                 document.onmousemove = null;
+        //                 document.onmouseup = null;
+        //             }
+        //         }
+        //     }
+        // }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Ubuntu', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #ffe5e5; */
+    background-image: url("背景55.png");
+}
+
+.container{
+    position: relative;
+    width:350px;
+    height:70px;
+}
+
+.container ul{
+    display: flex;
+}
+
+.container ul li{
+    position:relative;
+    list-style: none;
+    width:70px;
+    height:70px;
+    z-index: 1;
+}
+
+.container ul li a{
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:#fff;
+    text-align: center;
+}
+
+.container ul li a .iconfont{
+    position: relative;
+    line-height:75px;
+    transition:0.5s;
+    font-size: 30px;
+}
+
+.container ul li .active a .iconfont{
+    font-size:20px;
+    transform:translateX(-6px);
+}
+
+.container ul li a .text{
+    position:absolute;
+    font-size:12px;
+    color:#fff;
+    bottom:4px;
+    font-weight:400;
+    transition:0.25s;
+    text-transform:uppercase;
+    transform:scale(0);
+}
+
+.container ul li.active a .text{
+    transform:scale(1);
+}
+
+.indicator{
+    position: absolute;
+    left:0;
+    width:70px;
+    height:70px;
+    background:red;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.container ul li:nth-child(1).active ~ .indicator{
+    background: rgb(239, 181, 255);
+    box-shadow: 0 15px 25px rgb(233, 153, 255);
+    transform:translateX(calc(70px * 0));
+}
+
+.container ul li:nth-child(2).active ~ .indicator{
+    background: rgb(181, 190, 255);
+    box-shadow: 0 15px 25px rgb(152, 164, 255);
+    transform:translateX(calc(70px * 1));
+}
+
+.container ul li:nth-child(3).active ~ .indicator{
+    background: rgb(255, 181, 181);
+    box-shadow: 0 15px 25px rgb(252, 164, 164);
+    transform:translateX(calc(70px * 2));
+}
+
+.container ul li:nth-child(4).active ~ .indicator{
+    background: rgb(166, 254, 216);
+    box-shadow: 0 15px 25px rgb(139, 252, 203);
+    transform:translateX(calc(70px * 3));
+}
+
+.container ul li:nth-child(5).active ~ .indicator{
+    background: rgb(231, 243, 176);
+    box-shadow: 0 15px 25px rgb(214, 222, 175);
+    transform:translateX(calc(70px * 4));
+}

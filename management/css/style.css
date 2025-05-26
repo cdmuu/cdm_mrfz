@@ -1,0 +1,155 @@
+/*google-fonts*/
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); */
+@import './google-fonts.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 35px;
+  background-image: url(../images/背景55.png);
+  /* background: linear-gradient(to left top, #031a9a, #8b53ff); */
+  font-family: 'Poppins',sans-serif;
+}
+
+.wrapper{
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper i{/*左右按键*/
+  width: 50px;
+  height: 50px;
+  background-color: #ffe3e3;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  top:50%;
+  transform: translateY(-50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .23 );
+}
+
+.wrapper i:first-child{
+  left: -22px;
+}
+
+.wrapper i:last-child{
+  right: -22px;
+}
+
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+.carousel :where(.card, .img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.carousel .card{
+  scroll-snap-align: start;
+  list-style: none;
+  width:280px;
+  height: 550px;
+  background-image: linear-gradient(red, #ffe0e0);
+  /* background-color: #ffd8d8; */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 15px;
+  padding-left: 2px;
+  cursor: pointer;
+
+}
+
+.carousel.no-transition{
+  scroll-behavior: auto;
+}
+
+.carousel.dragging{
+  scroll-snap-type:none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card{
+  cursor: grab;
+  user-select: none;
+}
+
+.card .img{
+  width: 240px;
+  height: 260px;
+  /* background-color: #f2ebff; */
+  background-image: url("../images/背景33.png");
+  border-radius: 50%;
+}
+
+.card .img img{
+  width: 370px;
+  object-fit: cover;
+}
+
+.card h2{
+  font-family: 500;
+  font-size: 1.56rem;
+  margin: 80px 0 5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  color:#000;
+}
+a:link{
+  color:#000;
+}
+
+.card span{
+  color: #6a6d78;
+  font-size: 0.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}

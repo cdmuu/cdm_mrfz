@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set</title>
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="set.css">
+    <!-- 引入图标font-css文件 -->
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li class="items active">
+                <a href="#">
+                    <span class="iconfont iconAnalyse"></span>
+                    <span class="text">分析</span>
+                </a>
+            </li>
+            <li class="items">
+                <a href="#">
+                    <span class="iconfont iconLeadingIn"></span>
+                    <span class="text">导入</span>
+                </a>
+            </li>
+            <li class="items">
+                <a href="#">
+                    <span class="iconfont iconIncrease"></span>
+                    <span class="text">增加</span>
+                </a>
+            </li>
+            <li class="items">
+                <a href="#">
+                    <span class="iconfont iconOperate"></span>
+                    <span class="text">操作</span>
+                </a>
+            </li>
+            <li class="items">
+                <a href="#">
+                    <span class="iconfont iconIndividual"></span>
+                    <span class="text">个人</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+    <script>
+        let list = document.querySelectorAll('.items');
+        function setAvctiveClass(){
+            list.forEach((item)=>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item =>
+        item.addEventListener('mouseover',setAvctiveClass)))
+    </script>
+</body>
+</html>

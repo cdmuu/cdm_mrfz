@@ -1,0 +1,172 @@
+
+* {
+    outline: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image: url("img/背景.jpg") !important;
+}
+
+.container{
+    margin: 0 !important;
+    padding: 0 !important;
+    /* background-color: #ffffff; */
+    width:1020px !important;
+    height:100vh;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet Ms',sans-serif;
+}
+
+.nav{
+    width:55px;
+    height:380px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #4e5353;
+    border-radius: 10px;
+    transition: .3s;
+    overflow: hidden;
+    margin-right:80px;
+}
+
+.items{
+    display:block;
+    height:15%;
+    width:85%;
+    margin:8px;
+    border-radius: 5px;
+    position: relative;
+    transition: .3s;
+    color:rgb(227, 227, 228);
+}
+
+.items i {
+    font-size: 24px;
+    position: absolute;
+    margin: 2px 0 0 10px;
+}
+
+.items:nth-child(1)::before,
+.items:nth-child(4)::before,
+.items:nth-child(6)::before{
+    content:'';
+    display:block;
+    width:100%;
+    height:2px;
+    background-color: rgb(255, 255, 255);
+    position:absolute;
+    bottom:-10px;
+}
+
+.items span{
+    position: relative;
+    top:8px;
+    left:60px;
+    font:18px;
+    opacity: 1;
+}
+
+.nav:hover{
+    width:270px;
+}
+
+.items:hover{
+    background-color: #ffd7d7;
+    color:#f78585;
+}
+
+/* .items:hover span{
+    opacity: 1;
+} */
+
+.searchContainer{
+    display: flex;
+    margin:20px;
+}
+.search{
+    position: relative;
+    width: 300px;
+    height:45px;
+    background-color: #4e5353;
+    border-radius: 18px;
+    box-shadow: 0 4px 5px #4e5353;
+}
+
+.searchImg{
+    margin-left:255px;
+    margin-top:-24px;
+    background-color: transparent;
+}
+
+.searchPicture{
+    width:30px;
+    height:30px;
+}
+
+.search input {
+    width: 80%;
+    height: 20px;
+    border: 0;
+    font-size:18px;
+    color: #ffd7d7;
+    margin-left:20px;
+    margin-top:10px;
+    background-color:transparent;
+}
+
+.search input::placeholder {
+    color: rgb(254, 236, 236);
+}
+
+.date{
+    position:absolute;
+    color:#ffffff;
+    font-size:36px;
+    font-weight:900;
+    display: flex;
+    margin:20px;
+}
+
+.dateLine{
+    color:grey;
+}
+
+.dateText{
+    background:linear-gradient(-210deg, #3a4441 0%,#5e6268 100%);
+    color:transparent;
+    -webkit-background-clip: text;
+}
+
+.notice{
+    width:85%;
+    height:430px;
+    margin-top:80px;
+    margin-left:-320px;
+    padding-right: 60px;
+}
+
+/* .tips{
+    background-color: #ffe5e5;
+    width:100%;
+    height:1px;
+    margin-top: -30px;
+    color:aliceblue;
+    font-size: 20px;
+
+} */
+
+/* .employee{
+    width:90%;
+    height:430px;
+    display: flex;
+    background-color: #fff;
+} */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 引入css文件 -->
+        <link rel="stylesheet" href="set.css">
+        <!-- 引入jquery -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <title>账户</title>
+    </head>
+    <body>
+       <div class="container">
+            <!-- 滑动-->
+            <div class="boxOne">
+                <h1>WELCOME</h1>
+                <p>JOIN US!</p>
+                <div class="boxImg">
+                    <img src="img/红.jpg">
+                </div>
+            </div>
+            <!--注册-->
+            <div class="registerForm">
+                <!-- 标题 -->
+                <div class="boxTitle">
+                    <h1>注册</h1>
+                </div>
+                <!--输入框-->
+                <div class="boxInput">
+                    <input type="text" placeholder="用户名">
+                    <input type="password" placeholder="密码">
+                    <input type="password" placeholder="确认密码">
+                </div>
+                <!--按钮-->
+                <div class="boxButton">
+                    <button>注册</button>
+                    <!-- 绑定点击事件 -->
+                    <p onclick="mySwitch()">已有账号?去登录</p>
+                </div>
+            </div>
+            <!--登录-->
+            <div class="loginForm">
+                <!--标题-->
+                <div class="boxTitle">
+                    <h1>登录</h1>
+                </div>
+                <!--输入框-->
+                <div class="boxInput">
+                    <input type="text" placeholder="用户名">
+                    <input type="password" placeholder="密码">
+                </div>
+                <!--按钮-->
+                <div class="boxButton">
+                    <button>登录</button>
+                    <!-- 绑定点击事件 -->
+                    <p onclick="mySwitch()">没有账号?去注册</p>
+                </div>
+            </div>
+        </div>
+       <script>
+            // 滑动的状态
+             let flag=true
+             const mySwitch=()=>{
+                if(flag){
+                    // 获取到滑动盒子的dom元素并修改它移动的位置
+                    $(".boxOne").css("transform","translateX(100%)")
+                    // 获取到滑动盒子的dom元素并修改它的背景颜色
+                    $(".boxOne").css("background-color","#c9e0ed")
+                    //修改图片的路径
+                    $("img").attr("src","img/红.jpg")
+                    
+                }
+                else {
+                    $(".boxOne").css("transform","translateX(0%)")
+                    $(".boxOne").css("background-color","#edd4dc")
+                    $("img").attr("src","img/阿米娅.jpg")
+                }
+                flag=!flag
+             }
+             
+       </script>
+    </body>
+</html>

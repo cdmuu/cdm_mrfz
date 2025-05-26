@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>终端</title>
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="terminal.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="header">
+            <h2 class="title">主题曲</h2>
+        </div>
+        <div class="timeLine">
+            <div class="item" data-text="黑暗时代·上">
+                <div class="content">
+                    <a href="序章.html">
+                        <img src="images/黑暗时代part1.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">序章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="黑暗时代·下">
+                <div class="content">
+                    <a href="第一章.html">
+                        <img src="images/黑暗时代part2.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第一章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="异卵同生">
+                <div class="content">
+                    <a href="#">
+                        <img src="images/异卵同生.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第二章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="二次呼吸">
+                <div class="content">
+                    <a href="#">
+                        <img src="images/二次呼吸.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第三章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="急性衰竭">
+                <div class="content">
+                    <a href="#">
+                        <img src="images/急性衰竭.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第四章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="靶向药物">
+                <div class="content">
+                    <a href="#">
+                        <img src="images/靶向药物.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第五章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="局部坏死">
+                <div class="content">
+                    <a href="#">
+                        <img src="images/局部坏死.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第六章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="苦难摇篮">
+                <div class="content">
+                    <a href="#">
+                       <img src="images/苦难摇篮.png" alt="" class="img"> 
+                    </a>
+                    <h2 class="contentTitle">第七章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="怒号光明">
+                <div class="content">
+                    <a href="#">
+                        <img src="images/怒号光明.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第八章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="风暴瞭望">
+                <div class="content">
+                    <a href="#">
+                        <img src="images/风暴瞭望.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第九章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="破碎日冕">
+                <div class="content">
+                    <a href="#">
+                        <img src="images/破碎日冕.png" alt="" class="img">
+                    </a>
+                    <h2 class="contentTitle">第十章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="淬火尘霾">
+                <div class="content">
+                    <a href="#">
+
+                    </a>
+                    <img src="images/淬火尘霾.png" alt="" class="img">
+                    <h2 class="contentTitle">第十一章</h2>
+                </div>
+            </div>
+
+            <div class="item" data-text="惊霆无声">
+                <div class="content">
+                    <a href="#">
+
+                    </a>
+                    <img src="images/惊霆无声.png" alt="" class="img">
+                    <h2 class="contentTitle">第十二章</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+
+        (function ($) {
+            $.fn.timeLine = function () {
+                var selectors = {
+                    id: $(this),
+                    item: $(this).find(".item"),
+                    activeClass: "itemActive",
+                    img: ".img"
+                };
+                // 将第一个时间轴项目激活，并设置时间轴背景图片为第一个项目的图片
+                selectors.item.eq(0).addClass(selectors.activeClass);
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    selectors.item.first()
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+                // 获取时间轴项目的总数
+                var itemLength = selectors.item.length;
+                // 当页面滚动时，触发滚动事件
+                $(window).scroll(function () {
+                    var max, min;
+                    // 获取页面滚动的距离
+                    var pos = $(this).scrollTop();
+                    selectors.item.each(function (i) {
+                        // 获取当前时间轴项目的最小和最大高度
+                        min = $(this).offset().top;
+                        max = $(this).height() + $(this).offset().top;
+                        var that = $(this);
+                        // 如果滚动到最后一个项目，并且超过了当前项目高度的一半，
+                        // 则将最后一个项目设置为激活状态，并设置背景图片为最后一个项目的图片
+                        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                            selectors.item.removeClass(selectors.activeClass);
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                selectors.item.last()
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.last().addClass(selectors.activeClass);
+                        }
+                        // 如果当前滚动位置在当前项目的最小和最大高度之间，
+                        // 则将当前项目设置为激活状态，并设置背景图片为当前项目的图片
+                        else if (pos <= max - 10 && pos >= min) {
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                $(this)
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.removeClass(selectors.activeClass);
+                            $(this).addClass(selectors.activeClass);
+                        }
+                    });
+                });
+            };
+        })(jQuery)
+        /*
+        最后，我们调用 timeline 插件并传入时间轴的 ID 作为参数。
+        这将启用时间轴插件并为该时间轴绑定滚动事件。
+        */
+       $("#container").timeLine();
+
+
+    </script>
+</body>
+
+</html>

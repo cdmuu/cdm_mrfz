@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            text-decoration: none;
+        }
+        body{
+            background-color: #9df5ff;
+        }
+        .container{
+            background-color: white;
+        }
+        .logo{
+           margin-left:-120px;
+        }
+        #logo{
+            width:100%;
+            height:100px;
+        }
+        .div{
+            border-radius: 23px;
+            background-color: #cff9ff;
+        }
+        h2{
+            padding:10px;
+            border:1px solid #ccc;
+            border-top:none;
+            
+        }
+        .choose h2{
+            font-size:25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .choose img{
+            width:150px;
+            margin-left:60px;
+        }
+        .Alipay{
+            display: flex;
+            padding:30px;
+        }
+        .Alipay p{
+            display: flex;
+            position: relative;
+            margin-left:60px;
+            margin-top:50px;
+        }
+        .Alipay input{
+            margin-left:430px;
+            margin-top:-10px;
+        }
+        .WeChat{
+            display: flex;
+            padding:30px;
+        }
+        .WeChat p{
+            display: flex;
+            position: relative;
+            margin-left:60px;
+            margin-top:50px;
+        }
+        .WeChat input{
+            margin-left:452px;
+            margin-top:-10px;
+        }
+        .PayPal{
+            display: flex;
+            padding:30px;
+        }
+        .PayPal p{
+            display: flex;
+            position: relative;
+            margin-left:60px;
+            margin-top:50px;
+        }
+        .PayPal input{
+            margin-left:434px;
+            margin-top:-10px;
+        }
+        .HuaB{
+            display: flex;
+            padding:30px;
+        }
+        .HuaB p{
+            display: flex;
+            position: relative;
+            margin-left:60px;
+            margin-top:50px;
+        }
+        .HuaB input{
+            margin-left:420px;
+            margin-top:-10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img id="logo" src="bilibili.png" onclick="fn1()">
+            
+        </div>
+
+        <div class="div">
+            <h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp游戏名称：明日方舟</h2>
+            <h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp商品名称：开采一组源石</h2>
+            <h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp支付金额：30.00元</h2>
+            
+        </div>
+        
+        <div class="choose">
+            <h2>&nbsp&nbsp请选择支付方式：</h2>
+            <form method="post">
+                <div class="Alipay">
+                    <img src="支付宝.jpg">
+                    <p>推荐使用支付宝支付</p>
+                    <input type="radio" name="payment" value="支付宝支付">
+                </div>
+               
+                <div class="WeChat">
+                    <img src="微信支付.jpg">
+                    <p>推荐使用微信支付</p>
+                    <input type="radio" name="payment" value="微信支付">
+                </div>
+
+                <div class="PayPal">
+                    <img src="PayPal支付.jpg">
+                    <p>推荐使用PayPal支付</p>
+                    <input type="radio" name="payment" value="PayPal支付">
+                </div>
+
+                <div class="HuaB">
+                    <img src="花呗支付.jpg">
+                    <p>推荐使用花呗支付支付</p>
+                    <input type="radio" name="payment" value="花呗支付">
+                </div>
+    
+            </form>
+       
+        </div>
+    </div>
+</body>
+<script>
+    function fn1(){
+        alert("取消支付！");
+        location.href="../源石交易所.html";
+    }
+</script>
+</html>
